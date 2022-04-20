@@ -9,3 +9,26 @@ Splunk UI supports react, which makes it a useful extention for developer to add
 This project implemented a Splunk App with network visualization.  It allows developer to create customized UI component to present your search result a network graph.
 
 ![SplunkApp-network](https://user-images.githubusercontent.com/853925/164152073-c0cf54c5-069f-4c1b-a521-789661b0ee9d.png)
+
+# 🚀 Quick start
+1. Clone the project & install dependencies
+```
+    git clone git@github.com:WISeAgent/SplunkAppNetworkGraph.git
+    cd SplunkAppNetworkGraph
+    yarn install
+```
+2. To run the demo component and view it from http://127.0.0.1:8080/
+
+```
+    yarn run setup
+    cd packages/my-react-component
+    yarn run start:demo
+```
+4. to build the Splunk App and deploy as symbolic link
+
+```
+    yarn install
+    yarn run build
+    yarn urn link:app
+```
+
