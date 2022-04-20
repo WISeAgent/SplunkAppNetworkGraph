@@ -1,4 +1,4 @@
-# A Splunk App for Network Graph Visualizaton   
+# A Splunk App to Visualize Your Search Data as Network Graph   
 
 Splunk is a software platform to search, analyze and visualize the machine-generated data gathered. It makes machine data accessible, usable and valuable to everyone.  
 
