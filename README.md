@@ -7,8 +7,8 @@ A Splunk app is an extension of Splunk functionality which has its own in-built 
 Splunk UI supports react, which makes it a useful extention for developer to add more UI components for specialized visualization requirements.  Information extracted from Splunk presented as network graph will help network enginer/security analyst to get more insight from it.
 
 This project implemented a Splunk App with network visualization.  It allows developer to create customized UI component to present your search result a network graph.
+![SplunkApp-network](https://user-images.githubusercontent.com/853925/164213112-33e164c4-326a-4a16-ab96-2d8d4534feee.png)
 
-![SplunkApp-network](https://user-images.githubusercontent.com/853925/164152073-c0cf54c5-069f-4c1b-a521-789661b0ee9d.png)
 
 # 🚀 Quick start
 1. Clone the project & install dependencies
