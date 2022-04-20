@@ -4,7 +4,7 @@ Splunk is a software platform to search, analyze and visualize the machine-gener
 
 A Splunk app is an extension of Splunk functionality which has its own in-built UI context to serve a specific need. Effectively, it is a web application with predefined set of UI components to visualize the search result.
 
-Splunk UI supports react, which makes it a useful extention for developer to add more UI components for specialized visualization components to Splunk App.
+Splunk UI supports react, which makes it a useful extention for developer to add more UI components for specialized visualization requirements.  Information extracted from Splunk presented as network graph will help network enginer/security analyst to get more insight from it.
 
 This project implemented a Splunk App with network visualization.  It allows developer to create customized UI component to present your search result a network graph.
 
