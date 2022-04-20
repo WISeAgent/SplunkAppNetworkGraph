@@ -13,22 +13,22 @@ This project implemented a Splunk App with network visualization.  It allows dev
 # 🚀 Quick start
 1. Clone the project & install dependencies
 ```
-    git clone git@github.com:WISeAgent/SplunkAppNetworkGraph.git
-    cd SplunkAppNetworkGraph
-    yarn install
+    $ git clone git@github.com:WISeAgent/SplunkAppNetworkGraph.git
+    $ cd SplunkAppNetworkGraph
+    $ yarn install
 ```
 2. To run the demo component and view it from http://127.0.0.1:8080/
 
 ```
-    yarn run setup
-    cd packages/my-react-component
-    yarn run start:demo
+    $ yarn run setup
+    $ cd packages/my-react-component
+    $ yarn run start:demo
 ```
 4. to build the Splunk App and deploy as symbolic link
 
 ```
-    yarn install
-    yarn run build
-    yarn urn link:app
+    $ yarn install
+    $ yarn run build
+    $ yarn urn link:app
 ```
 
