@@ -1,7 +1,5 @@
 .DS_Store
 .idea/
-*-lock.*
-*.lock
 lerna-debug.log
 node_modules
 npm-debug.log
