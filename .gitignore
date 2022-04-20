@@ -2,6 +2,7 @@
 .idea/
 *-lock.*
 *.lock
+*.bak
 lerna-debug.log
 node_modules
 npm-debug.log
