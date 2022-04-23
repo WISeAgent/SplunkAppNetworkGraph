@@ -43,6 +43,8 @@
     "@babel/template" "^7.16.7"
     "@babel/traverse" "^7.17.9"
     "@babel/types" "^7.17.0"
+    "@splunk/react-events-viewer" "^4.0.0"
+    "@splunk/search-job" "^2.0.0"
     "convert-source-map" "^1.7.0"
     "debug" "^4.1.0"
     "gensync" "^1.0.0-beta.2"
@@ -945,6 +947,14 @@
     "@babel/helper-validator-option" "^7.16.7"
     "@babel/plugin-transform-typescript" "^7.16.7"
 
+"@babel/runtime-corejs2@^7.5.5":
+  "integrity" "sha512-+QThIsnjVY12uURTvmnW33risFZ7ulq6OWw0VJL08UwiYiWVp9PM63s+W1L2ppajYyKAYKb7afcGYSHzA0k04Q=="
+  "resolved" "https://registry.npmjs.org/@babel/runtime-corejs2/-/runtime-corejs2-7.17.9.tgz"
+  "version" "7.17.9"
+  dependencies:
+    "core-js" "^2.6.5"
+    "regenerator-runtime" "^0.13.4"
+
 "@babel/runtime-corejs3@^7.10.2":
   "integrity" "sha512-WxYHHUWF2uZ7Hp1K+D1xQgbgkGUfA+5UPOegEXGt2Y5SMog/rYCVaifLZDbw8UkNXozEqqrZTy6bglL7xTaCOw=="
   "resolved" "https://registry.npmjs.org/@babel/runtime-corejs3/-/runtime-corejs3-7.17.9.tgz"
@@ -953,7 +963,7 @@
     "core-js-pure" "^3.20.2"
     "regenerator-runtime" "^0.13.4"
 
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.16.3", "@babel/runtime@^7.2.0", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.14.0", "@babel/runtime@^7.16.3", "@babel/runtime@^7.2.0", "@babel/runtime@^7.8.4":
   "integrity" "sha512-lSiBBvodq29uShpWGNbgFdKYNiFDo5/HIYsaCEY9ff4sb10x9jizo2+pRrSyF4jKZCXqgzuqBOQKbUm90gQwJg=="
   "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.17.9.tgz"
   "version" "7.17.9"
@@ -1405,23 +1415,56 @@
     "@babel/preset-react" "^7.0.0"
     "@babel/preset-typescript" "^7.8.3"
 
+"@splunk/datasource-utils@^12.0.0":
+  "integrity" "sha512-fUelBXKM/fcPNslpMRdDlT2Eyv4m0P5vMAFFxzYQ3TwdOqRdtHyle2rHlonU/9SMAQV9cYbh73/PgDktnwplKw=="
+  "resolved" "https://registry.npmjs.org/@splunk/datasource-utils/-/datasource-utils-12.0.0.tgz"
+  "version" "12.0.0"
+  dependencies:
+    "@babel/runtime-corejs2" "^7.5.5"
+    "lodash" "^4.17.4"
+
 "@splunk/eslint-config@^4.0.0":
   "integrity" "sha512-u2ZbzoLVJUtcBwX5RcAzET9cGuKjFrDOHLcA0FswmhPkrfSWVl7Ajd6ewGWCyG3tJxXSPvuYutD7SPeSBurIMg=="
   "resolved" "https://registry.npmjs.org/@splunk/eslint-config/-/eslint-config-4.0.0.tgz"
   "version" "4.0.0"
 
-"@splunk/my-react-component@^0.0.1", "@splunk/my-react-component@file:d:\\WISeAgent\\wrk\\splunk\\dev\\packages\\my-react-component":
+"@splunk/moment@^0.6.0":
+  "integrity" "sha512-GK+hAYImn5FQi9Ar1o2Edr1r8bC31UfXKj1c3ChlPGlMfRKI5I7M221kJ7n4onBO4OENuvP1TMA+fWO1x/dMWg=="
+  "resolved" "https://registry.npmjs.org/@splunk/moment/-/moment-0.6.0.tgz"
+  "version" "0.6.0"
+  dependencies:
+    "@splunk/splunk-utils" "^2.0.0"
+    "@splunk/ui-utils" "^1.2.1"
+    "lodash" "^4.17.14"
+
+"@splunk/my-react-component@^0.0.1", "@splunk/my-react-component@file:d:\\WISeAgent\\wrk\\splunk\\SplunkAppNetworkGraph\\packages\\my-react-component":
   "resolved" "file:packages/my-react-component"
   "version" "0.0.1"
   dependencies:
     "@splunk/react-ui" "^4.6.0"
     "@splunk/themes" "^0.10.1"
 
-"@splunk/my-splunk-app@file:d:\\WISeAgent\\wrk\\splunk\\dev\\packages\\my-splunk-app":
+"@splunk/my-splunk-app@file:d:\\WISeAgent\\wrk\\splunk\\SplunkAppNetworkGraph\\packages\\my-splunk-app":
   "resolved" "file:packages/my-splunk-app"
   "version" "0.0.1"
 
-"@splunk/react-icons@^3.2.0":
+"@splunk/react-events-viewer@^4.0.0":
+  "integrity" "sha512-i7LjrkhgaqRoBze/f5co33lpbGKlSHoSkxqxCurj7GU9T31NYAr8p208Ki4GNLm4Zgssm37S5r0A04uqBcB4Tg=="
+  "resolved" "https://registry.npmjs.org/@splunk/react-events-viewer/-/react-events-viewer-4.0.0.tgz"
+  "version" "4.0.0"
+  dependencies:
+    "@babel/runtime" "^7.14.0"
+    "@splunk/moment" "^0.6.0"
+    "@splunk/react-icons" "^3.0.1"
+    "@splunk/react-selection-actions" "^0.3.0"
+    "@splunk/react-ui" "^4.0.3"
+    "@splunk/react-visualization-utils" "^2.0.0"
+    "@splunk/themes" "^0.7.0"
+    "@splunk/ui-utils" "^1.2.1"
+    "lodash" "^4.17.19"
+    "prop-types" "^15.6.0"
+
+"@splunk/react-icons@^3.0.1", "@splunk/react-icons@^3.2.0":
   "integrity" "sha512-Uy9GOmxu1vAoMeEPyPc3LcJ8i0iL9/uPVppNpcQWltx8uQS0SmfUtgyaElLY+NPUfJdP/sWO+P8jhMvvdXxvQg=="
   "resolved" "https://registry.npmjs.org/@splunk/react-icons/-/react-icons-3.2.0.tgz"
   "version" "3.2.0"
@@ -1446,7 +1489,20 @@
     "prop-types" "^15.6.2"
     "scriptjs" "^2.5.8"
 
-"@splunk/react-ui@^4.6.0":
+"@splunk/react-selection-actions@^0.3.0":
+  "integrity" "sha512-TgRxP52jrR6da5y0ruXtYJWZ1JOir3bKFMo06yb4XMvrEsj2VZXJUq69JlZg4rIJa5NXJf/S0zITHeckTQsT1w=="
+  "resolved" "https://registry.npmjs.org/@splunk/react-selection-actions/-/react-selection-actions-0.3.0.tgz"
+  "version" "0.3.0"
+  dependencies:
+    "@babel/runtime" "^7.14.0"
+    "@splunk/react-icons" "^3.0.1"
+    "@splunk/react-ui" "^4.0.3"
+    "@splunk/themes" "^0.7.0"
+    "@splunk/ui-utils" "^1.2.1"
+    "prop-types" "^15.7.2"
+    "react-is" "^16.10.0"
+
+"@splunk/react-ui@^4.0.3", "@splunk/react-ui@^4.6.0":
   "integrity" "sha512-neyY6RJNmdWc3Cim6OApPrPYfZEcBaghrarD+R1v0be6RSCaDpChJ799vYl9nS0IDu1mXHzgjSBkygS81xOpYA=="
   "resolved" "https://registry.npmjs.org/@splunk/react-ui/-/react-ui-4.6.0.tgz"
   "version" "4.6.0"
@@ -1472,6 +1528,15 @@
     "react-spring" "^9.2.2"
     "tinycolor2" "^1.4.1"
     "use-typed-event-listener" "^3.0.0"
+
+"@splunk/react-visualization-utils@^2.0.0":
+  "integrity" "sha512-XrwC/i0BHxvQRgC+6/WljeLU+KM9uUjqoD0pdCGbDqNGmDph4f4sziH9/B/GC88emuenardsKWxWdNOUOw7iAA=="
+  "resolved" "https://registry.npmjs.org/@splunk/react-visualization-utils/-/react-visualization-utils-2.0.0.tgz"
+  "version" "2.0.0"
+  dependencies:
+    "@babel/runtime" "^7.14.0"
+    "@splunk/datasource-utils" "^12.0.0"
+    "lodash" "^4.17.19"
 
 "@splunk/search-job@^2.0.0":
   "integrity" "sha512-VqzU1nmxhSD8Y2Tq+pX/4miE9HqYIC38CEkRJAAZhzm9t6UdAspQ6VmQvjjQAXE3KMRI4/0HEjFmdA7WRcqUEg=="
@@ -1512,7 +1577,20 @@
     "lodash" "^4.17.14"
     "tinycolor2" "^1.4.1"
 
-"@splunk/ui-utils@^1.4.0":
+"@splunk/themes@^0.7.0":
+  "integrity" "sha512-klgyIxyQkCDaoHdprXXBu59iz4ePtopXcY42ZlzOKIof1IHq+0A5VE86npfX3+hCe43VrJMTkDIRxLFS0gfdyQ=="
+  "resolved" "https://registry.npmjs.org/@splunk/themes/-/themes-0.7.0.tgz"
+  "version" "0.7.0"
+  dependencies:
+    "@types/lodash" "^4.14.156"
+    "@types/react" "^16.9.38"
+    "@types/styled-components" "^5.1.0"
+    "@types/tinycolor2" "^1.4.2"
+    "color-blend" "^2.0.9"
+    "lodash" "^4.17.14"
+    "tinycolor2" "^1.4.1"
+
+"@splunk/ui-utils@^1.2.1", "@splunk/ui-utils@^1.4.0":
   "integrity" "sha512-A+EpajHf+dUaV3m8VlWCW5NS5wDPszDRoVyCy3wInqwuo3spQIhK3LDfDwy2BoAtHZ6Ro7pqaKhXGG2A8Qv65A=="
   "resolved" "https://registry.npmjs.org/@splunk/ui-utils/-/ui-utils-1.4.0.tgz"
   "version" "1.4.0"
@@ -3649,6 +3727,11 @@
   "integrity" "sha512-ylOC9nVy0ak1N+fPIZj00umoZHgUVqmucklP5RT5N+vJof38klKn8Ze6KGyvchdClvEBr6LcQqJpI216LUMqYA=="
   "resolved" "https://registry.npmjs.org/core-js-pure/-/core-js-pure-3.22.0.tgz"
   "version" "3.22.0"
+
+"core-js@^2.6.5":
+  "integrity" "sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ=="
+  "resolved" "https://registry.npmjs.org/core-js/-/core-js-2.6.12.tgz"
+  "version" "2.6.12"
 
 "core-util-is@~1.0.0":
   "integrity" "sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ=="
@@ -9014,7 +9097,7 @@
     "object.assign" "^4.1.0"
     "reflect.ownkeys" "^0.2.0"
 
-"prop-types@^15.5.10", "prop-types@^15.5.7", "prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1":
+"prop-types@^15.5.10", "prop-types@^15.5.7", "prop-types@^15.6.0", "prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -9231,7 +9314,7 @@
     "minimist" "^1.2.0"
     "strip-json-comments" "~2.0.1"
 
-"react-dom@^0.14.0 || ^15.0.0 || ^16.0.0", "react-dom@^16.0.0-0", "react-dom@^16.12.0", "react-dom@^16.8", "react-dom@^16.8.0  || ^17.0.0", "react-dom@>= 16.8.0":
+"react-dom@^0.14.0 || ^15.0.0 || ^16.0.0", "react-dom@^16.0.0-0", "react-dom@^16.10.0", "react-dom@^16.12.0", "react-dom@^16.8", "react-dom@^16.8.0  || ^17.0.0", "react-dom@>= 16.8.0":
   "integrity" "sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-16.14.0.tgz"
   "version" "16.14.0"
@@ -9252,7 +9335,7 @@
     "vis-data" "^7.1.2"
     "vis-network" "^9.0.0"
 
-"react-is@^16.12.0", "react-is@^16.13.1", "react-is@^16.7.0", "react-is@^16.8.4", "react-is@^16.8.6", "react-is@>= 16.8.0":
+"react-is@^16.10.0", "react-is@^16.12.0", "react-is@^16.13.1", "react-is@^16.7.0", "react-is@^16.8.4", "react-is@^16.8.6", "react-is@>= 16.8.0":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
@@ -9298,7 +9381,7 @@
     "react-is" "^16.8.6"
     "scheduler" "^0.19.1"
 
-"react@*", "react@^0.14 || ^15.0.0 || ^16.0.0-alpha", "react@^0.14.0 || ^15.0.0 || ^16.0.0", "react@^16.0.0", "react@^16.0.0-0", "react@^16.12.0", "react@^16.14.0", "react@^16.8", "react@^16.8.0  || ^17.0.0", "react@>= 16.8.0", "react@>=0.14.0", "react@>=16.11", "react@>=16.8.0", "react@0.13.x || 0.14.x || ^15.0.0-0 || ^16.0.0-0":
+"react@*", "react@^0.14 || ^15.0.0 || ^16.0.0-alpha", "react@^0.14.0 || ^15.0.0 || ^16.0.0", "react@^16.0.0", "react@^16.0.0-0", "react@^16.10.0", "react@^16.12.0", "react@^16.14.0", "react@^16.8", "react@^16.8.0  || ^17.0.0", "react@>= 16.8.0", "react@>=0.14.0", "react@>=16.11", "react@>=16.8.0", "react@0.13.x || 0.14.x || ^15.0.0-0 || ^16.0.0-0":
   "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
   "version" "16.14.0"
@@ -10687,7 +10770,7 @@
   "resolved" "https://registry.npmjs.org/style-search/-/style-search-0.1.0.tgz"
   "version" "0.1.0"
 
-"styled-components@>= 2", "styled-components@5.1.1":
+"styled-components@^5", "styled-components@^5.1", "styled-components@>= 2", "styled-components@5.1.1":
   "integrity" "sha512-1ps8ZAYu2Husx+Vz8D+MvXwEwvMwFv+hqqUwhNlDN5ybg6A+3xyW1ECrAgywhvXapNfXiz79jJyU0x22z0FFTg=="
   "resolved" "https://registry.npmjs.org/styled-components/-/styled-components-5.1.1.tgz"
   "version" "5.1.1"

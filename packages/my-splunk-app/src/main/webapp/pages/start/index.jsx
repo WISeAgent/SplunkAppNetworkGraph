@@ -1,3 +1,12 @@
+//-----------------------------------------------------------------------------
+//=                                                                           =
+//= Copyright (c) 2000-2022 WANG Infonology Systems Pty Ltd, Sydney Austalia  =
+//=              --->  http://www.wiseagent.com.au  <---                      =
+//= Author : Wenjie Wang (wenjie.wang@wiseagent.com.au)                       =
+//= Change Hisory                                                             =
+//= 20220418 Wenjie Wang     Initial                                          =
+//=                                                                           =
+//-----------------------------------------------------------------------------
 import React from 'react';
 
 import layout from '@splunk/react-page';

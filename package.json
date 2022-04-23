@@ -22,6 +22,7 @@
     "node": ">=8"
   },
   "dependencies": {
+    "@splunk/react-events-viewer": "^4.0.0",
     "@splunk/search-job": "^2.0.0",
     "react-graph-vis": "^1.0.7",
     "vis-data": "^7.1.4",
