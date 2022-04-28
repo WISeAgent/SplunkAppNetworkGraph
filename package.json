@@ -9,6 +9,7 @@
     "lint": "lerna run lint --no-sort",
     "setup": "yarn && lerna run build",
     "start": "lerna run start --stream --no-sort --concurrency 100",
+    "deploy": "xcopy /Y %cd%\\packages\\my-splunk-app\\stage %SPLUNK_HOME%\\etc\\apps\\my-splunk-app /E",
     "test": "lerna run test --stream --no-sort"
   },
   "devDependencies": {

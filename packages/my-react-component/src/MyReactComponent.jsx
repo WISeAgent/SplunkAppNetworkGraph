@@ -24,39 +24,44 @@ class MyReactComponent extends Component {
     static defaultProps = {
         name: 'My Network Graph',
     };
- 
     constructor(props) {
         super(props);
         this.state = { counter: 0 };
-       }
+        this.fetchData();
+    }
 
+// ref: https://docs.splunk.com/Documentation/Splunk/8.2.6/RESTTUT/RESTsearches#Get_search_results
+// resp.fields - array of field names
+// resp.results - array of results
+    // Later, if the results are no longer needed, and the search is not complete,
+    // unsubscribe to release resources.
+    //resultsSubscription.unsubscribe(); 
+    fetchData() {
+        var resultsSubscription;
+        var mySearchJob = SearchJob.create({
+            search: 'index=_internal | table clientip host user method uri | head 10',
+            earliest_time: '-60m@m',
+            latest_time: 'now',
+        });
+        console.log("fetchData-begin: [" + new Date().toISOString().slice(11,23) + "]");
+        return new Promise((resolve) => {
+            console.log("fetchData-Promise: [" + new Date().toISOString().slice(11,23) + "]");
+            resultsSubscription = mySearchJob.getResults()
+            .subscribe((results) => {
+                console.log(`[${new Date().toISOString().slice(11,23)}] fetchData-results: ${results.fields.length}`);
+                this.setState({counter:results.fields.length});
+                resolve(results.fields.length);
+            });
+        });
+    };
     render() {
-		const mySearchJob = SearchJob.create({
-			search: 'index=_internal | table clientip host user method uri | head 10',
-			earliest_time: '-60m@m',
-			latest_time: 'now',
-		});
-		var searchResult="sid";
-		const resultsSubscription = mySearchJob.getResults().subscribe( results=>{
-			// Do something with the results.
-            // ref: https://docs.splunk.com/Documentation/Splunk/8.2.6/RESTTUT/RESTsearches#Get_search_results
-            // resp.fields - array of field names
-            // resp.results - array of results
-            searchResult= results.fields.count
-            console.log(searchResult);
-            return (
-                <StyledContainer>
-                    <div>TODO: table for results from search job: http://127.0.0.1:8000/en-GB/splunkd/__raw/services/search/jobs</div>
-                    <div>Return fields: {searchResult}</div>
-                    //<VizEventViewer />
-                    <VizGraphvis />
-    
-                </StyledContainer>
-            );
-		});
-		// Later, if the results are no longer needed, and the search is not complete,
-		// unsubscribe to release resources.
-		resultsSubscription.unsubscribe();
+        return (
+            <StyledContainer>
+                <div>TODO: table for results from search job: http://127.0.0.1:8000/en-GB/splunkd/__raw/services/search/jobs</div>
+                <div>Return fields: {this.state.counter}</div>
+                <VizGraphvis />
+            </StyledContainer>
+        );
     }
 }
 
