@@ -8,7 +8,7 @@ Splunk UI supports react, which makes it a useful extention for developer to add
 
 This project implemented a Splunk App with network visualization.  It allows developer to create customized UI component to present your search result a network graph.
 
-![SplunkApp-network](https://user-images.githubusercontent.com/853925/166091971-b5a173df-6154-4c30-9640-7e42456cc403.png)
+![SplunkApp-network](https://user-images.githubusercontent.com/853925/166092196-c21751fc-606d-4b4a-a090-ad676a1b8ec7.png)
 
 
 # 🚀 Quick start
