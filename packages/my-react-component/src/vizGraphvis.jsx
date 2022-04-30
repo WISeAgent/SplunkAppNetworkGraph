@@ -13,10 +13,13 @@ import ReactDOM from "react-dom";
 
 const options = {
   layout: {
-    hierarchical: false
+    hierarchical: true
   },
   edges: {
     color: "#000000"
+  },
+  physics: {
+	  enabled: true
   }
 };
 
@@ -53,11 +56,11 @@ const vizGraphvis = () => {
     counter: 5,
     graph: {
       nodes: [
-        { id: 1, label: "Load Balance 1", color: "#e04141" },
-        { id: 2, label: "WebServer 1", color: "#e09c41" },
-        { id: 3, label: "WebServer 2", color: "#e0df41" },
-        { id: 4, label: "MSSQL", color: "#7be041" },
-        { id: 5, label: "REST API", color: "#41e0c9" }
+        { id: 1, label: "Load Balance 1", color: "#e04141", shape: "circle" },
+        { id: 2, label: "WebServer 1", color: "#e09c41", shape: "box" },
+        { id: 3, label: "WebServer 2", color: "#e0df41", shape: "box" },
+        { id: 4, label: "MSSQL", color: "#7be041", shape: "database" },
+        { id: 5, label: "REST API", color: "#41e0c9", shape: "database" }
       ],
       edges: [
         { from: 1, to: 2 },
